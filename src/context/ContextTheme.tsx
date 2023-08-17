@@ -1,6 +1,6 @@
-import { createContext, useContext, useReducer, useReducer } from "react";
-import { ThemeContext } from "styled-components";
-import { ThrowStatement } from "typescript";
+import { createContext, useContext, useReducer } from "react";
+// import { ThemeContext } from "styled-components";
+// import { ThrowStatement } from "typescript";
 
 interface State {
     theme: string
@@ -24,7 +24,7 @@ const initialData: State = {
     theme: 'light'
 } // this initially switch theme to light mode 
 
-const themeContext = createContext<ContextType | undefined>(undefined)
+const ThemeContext = createContext<ContextType | undefined>(undefined)
 
 export enum themeActions {
     setTheme,

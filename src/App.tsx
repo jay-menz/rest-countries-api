@@ -1,12 +1,12 @@
-// import React from 'react';
-import Header from './components/Header/Header';
-import { Link } from 'react-router-dom';
+import {MainRoutes} from "./Routes/MainRoutes";
+import { Header} from './components/Header/Header';
 
 
 function App() {
   return (
     <>
       <Header />
+      <MainRoutes />
     </>
   );
 }

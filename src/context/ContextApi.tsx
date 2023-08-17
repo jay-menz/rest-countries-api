@@ -7,7 +7,7 @@ const http = axios.create ({
 
 const ApiContext = createContext<any>(null);
 
-export const ApiProvider: React.FC = ({children}) => {
+export const ApiProvider: React.FC = ({ children }) => {
     const [countries, setCountries] = useState([]);
 
     useEffect(() => {
