@@ -1,7 +1,7 @@
-export interface CountriesTypeScript {
+export interface CountryItemTypeScript {
     name: string,
     capital: string,
     population: number,
     region: string,
-    flags: string
+    flag: string
 }

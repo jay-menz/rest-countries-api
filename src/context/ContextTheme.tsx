@@ -1,6 +1,4 @@
 import { createContext, useContext, useReducer } from "react";
-// import { ThemeContext } from "styled-components";
-// import { ThrowStatement } from "typescript";
 
 interface State {
     theme: string
@@ -20,9 +18,10 @@ interface ContextType {
     dispatch: (action: Actions) => void
 }
 
+
 const initialData: State = {
     theme: 'light'
-} // this initially switch theme to light mode 
+} //this initially switch theme to light mode
 
 const ThemeContext = createContext<ContextType | undefined>(undefined)
 
@@ -31,11 +30,11 @@ export enum themeActions {
 }
 
 const reducer = (state: State, action: Actions) => {
-      switch(action.type) {
+    switch(action.type) {
         case themeActions.setTheme:
             return {...state, theme: action.payload}
-            break
-      }
+        break
+    }
 }
 
 export const ThemeProvider = ({children}: Provider) => {
@@ -44,7 +43,7 @@ export const ThemeProvider = ({children}: Provider) => {
 
     return (
         <ThemeContext.Provider value={value}>
-             {children}
+            {children}
         </ThemeContext.Provider>
     )
 }

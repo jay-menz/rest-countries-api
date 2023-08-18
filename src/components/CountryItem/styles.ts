@@ -1,15 +1,17 @@
-import { CountryItem } from './CountryItem';
-import styled from "styled-components";
+import styles from "styled-components";
 
 export const CountryItem = styles.div<{theme: string}>`
-     background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
-     transition: all ease 0.2s;
-     border-radius: 4px;
-     a {
+    background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
+    transition: all ease 0.2s;
+    border-radius: 4px;
+    &:hover {
+        transform: scale(105%);
+    }
+    a {
         text-decoration: none;
         color: #000;
-     }
-     .img--area {
+    }
+    .img--area {
         img {
             width: 100%;
             height: 150px;
@@ -18,11 +20,10 @@ export const CountryItem = styles.div<{theme: string}>`
             border-bottom-left-radius: 4px;
             border-bottom-right-radius: 4px;
         }
-     }
-     .data--area {
+    }
+    .data--area {
         color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
         padding: 10px 20px;
-
         p {
             font-size: 13px;
             font-weight: 500;
@@ -35,5 +36,13 @@ export const CountryItem = styles.div<{theme: string}>`
             font-size: 17px;
             margin: 10px 0 20px 0;
         }
-     }
+    }
+
+    @media(max-width: 768px) {
+        .img--area {
+            img {
+                height: 180px;
+            }
+        }
+    }
 `

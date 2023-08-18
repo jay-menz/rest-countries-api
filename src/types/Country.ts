@@ -1,4 +1,4 @@
-export interface CountriesTypeScript {
+export interface CountryTypeScript {
     name: string,
     nativeName: string,
     population: number,
@@ -7,7 +7,7 @@ export interface CountriesTypeScript {
     capital: string,
     flags: {
         png: string
-    },
+    }
     topLevelDomain: [
         string
     ],

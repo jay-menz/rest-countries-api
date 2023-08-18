@@ -1,11 +1,9 @@
 import * as S from './styles'
-import { CountriesTypeScript } from '../../types/CountryItem'
+import { CountryItemTypeScript } from '../../types/CountryItem'
 import { Link } from 'react-router-dom'
 import { useForm } from '../../context/ContextTheme'
 
-
-
-export const CountryItem = ({name, population, region, capital, flags}:CountriesTypeScript ) => {
+export const CountryItem = ({name, population, region, capital, flag}: CountryItemTypeScript) => {
     const {state} = useForm()
 
     return (
