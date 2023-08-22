@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 import { ThemeProvider } from './context/ContextTheme';
 import { ApiProvider } from './context/ContextApi';
 import { BrowserRouter as Routes } from 'react-router-dom'
