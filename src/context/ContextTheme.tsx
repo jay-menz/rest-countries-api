@@ -1,7 +1,8 @@
 import { createContext, useContext, useReducer } from "react";
+import { DefaultTheme } from "styled-components";
 
 interface State {
-    theme: string
+    theme: DefaultTheme
 }
 
 interface Actions {
@@ -10,7 +11,7 @@ interface Actions {
 }
 
 interface Provider {
-    children: JSX.Element
+    children: React.ReactNode
 }
 
 interface ContextType {
@@ -20,7 +21,7 @@ interface ContextType {
 
 
 const initialData: State = {
-    theme: 'light'
+    theme: ['light']
 } //this initially switch theme to light mode
 
 const ThemeContext = createContext<ContextType | undefined>(undefined)
@@ -30,11 +31,7 @@ export enum themeActions {
 }
 
 const reducer = (state: State, action: Actions) => {
-    switch(action.type) {
-        case themeActions.setTheme:
-            return {...state, theme: action.payload}
-        break
-    }
+    return {...state, theme:action.payload}
 }
 
 export const ThemeProvider = ({children}: Provider) => {

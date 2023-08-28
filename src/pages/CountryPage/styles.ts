@@ -2,7 +2,7 @@ import styles from "styled-components";
 
 export const CountryPage = styles.main`
     min-height: calc(100vh - 80px);
-    background-color: ${props => props.theme === 'light' ? '' : 'rgb(32, 45, 54)'};
+    background-color: ${props => props.theme === props.theme.includes('light') ? '' : 'rgb(32, 45, 54)'};
     transition: all ease 0.2s;
     .container {
         width: 1150px;
@@ -11,14 +11,14 @@ export const CountryPage = styles.main`
         
         .loading {
             min-height: 100vh;
-            color: ${props => props.theme === 'light' ? '' : '#FFF'};
+            color: ${props => props.theme === props.theme.includes('light') ? '' : '#FFF'};
         }
     }
     
     .back--button {
         text-decoration: none;
-        background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
-        color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+        background-color: ${props => props.theme === props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
+        color: ${props => props.theme === props.theme.includes('light') ? '#000' : '#FFF'};
         margin-bottom: 30px;
         display: flex;
         justify-content: center;

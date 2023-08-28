@@ -1,8 +1,8 @@
-import styles from "styled-components";
+import styles, { DefaultTheme } from "styled-components";
 
-export const CountriesArea = styles.main<{theme: string}>`
+export const CountriesArea = styles.main<{theme: DefaultTheme}>`
     min-height: calc(100vh - 0px);
-    background-color: ${props => props.theme === 'light' ? '' : 'rgb(32, 45, 54)'};
+    background-color: ${props =>props.theme.includes('light') ? '' : 'rgb(32, 45, 54)'};
     transition: all ease 0.2s;
     .countries {
         display: grid;
@@ -12,7 +12,7 @@ export const CountriesArea = styles.main<{theme: string}>`
         grid-gap: 30px;
 
         .loading, .no-country-message {
-            color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+            color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
         }
     }
 
@@ -26,8 +26,8 @@ export const CountriesArea = styles.main<{theme: string}>`
         button {
             height: 40px;
             width: 40px;
-            background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
-            color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+            background-color: ${props =>props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
+            color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
             border: none;
             box-shadow: 0px 2px 9px 0px #0000000E;
             margin: 0px 5px;

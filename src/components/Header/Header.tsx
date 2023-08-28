@@ -9,7 +9,7 @@ export const Header = () => {
     const handleChangeTheme = () => {
         dispatch({
             type: themeActions.setTheme,
-            payload: state.theme === 'light' ? 'dark' : 'light'
+            payload: state.theme.includes('light') ? 'dark' : 'light'
         })
     }
     
@@ -18,8 +18,8 @@ export const Header = () => {
             <div className='container'>
             <Link to="/"><h1>Where in the world?</h1></Link>
                 <p onClick={handleChangeTheme}>
-                    <i className={state.theme === 'light' ? 'far fa-moon' : 'fa fa-moon'}></i>
-                    {state.theme === 'light' ? 'Dark Mode' : 'Light Mode'} {/* Conditionally render the text */}
+                    <i className={state.theme.includes('light') ? 'fa fa-sun' : 'fa fa-moon'}></i>
+                    {state.theme.includes('light') ? 'Light Mode' : 'Dark Mode' } {/* Conditionally render the text */}
                 </p>
             </div>
         </S.Header>

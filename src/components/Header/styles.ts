@@ -1,9 +1,9 @@
-import styles from "styled-components";
+import styles, { DefaultTheme } from "styled-components";
 
-export const Header = styles.header<{theme: string}>`
+export const Header = styles.header<{theme: DefaultTheme}>`
     height: 80px;
-    background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
-    color: ${props => props.theme === 'light' ? '' : '#FFF'};
+    background-color: ${props => props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
+    color: ${props =>props.theme.includes('light') ? '' : '#FFF'};
     transition: all ease 0.2s;
     box-shadow: 0px 2px 9px 0px #0000000E;
     transition: all ease 0.2s;
@@ -17,7 +17,7 @@ export const Header = styles.header<{theme: string}>`
 
         a {
             text-decoration: none;
-            color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+            color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
         }
 
         h1 {

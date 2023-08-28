@@ -3,7 +3,7 @@ import styles from "styled-components";
 export const CountryData = styles.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    color: ${props => props.theme === 'light' ? '#FFF' : 'inherit'};
+    color: ${props => props.theme === props.theme.includes('light') ? '#FFF' : 'inherit'};
     transition: all ease 0.2s;
 
     img {
@@ -52,7 +52,7 @@ export const CountryData = styles.div`
                 
                 a {
                     text-decoration: none;
-                    color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+                    color: ${props => props.theme === props.theme.includes('light') ? '#000' : '#FFF'};
                     display: flex;
                     min-height: 25px;
                     background-color: var(--background-color);

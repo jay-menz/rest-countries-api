@@ -1,6 +1,6 @@
-import styles from "styled-components";
+import styles, { DefaultTheme } from "styled-components";
 
-export const InputArea = styles.section<{theme: string}>`
+export const InputArea = styles.section<{theme: DefaultTheme}>`
     display: flex;
     width: 1150px;
     margin: auto;
@@ -9,15 +9,15 @@ export const InputArea = styles.section<{theme: string}>`
     transition: all ease 0.2s;
 
     .textAreaDiv {
-        background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
+        background-color: ${props =>props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
         box-shadow: 0px 2px 9px 0px #0000000E;
         border-radius: 5px;
         padding: 0 0 0 10px;
-        color: ${props => props.theme === 'light' ? '' : '#FFF'};
+        color: ${props =>props.theme.includes('light') ? '' : '#FFF'};
     }
     input {
-        background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
-        color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+        background-color: ${props =>props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
+        color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
         border-radius: 5px;
         width: 480px;
         height: 56px;
@@ -42,8 +42,8 @@ export const InputArea = styles.section<{theme: string}>`
         .dropdown-toggle {
         width: 200px;
         height: 56px;
-        background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
-        color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+        background-color: ${props =>props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
+        color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
         border: none;
         border-radius: 5px;
         padding: 10px;
@@ -58,7 +58,7 @@ export const InputArea = styles.section<{theme: string}>`
         .dropdown-toggle i {
             margin-left: 5px;
             transition: transform 0.2s ease;
-            color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+            color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
         }
         
         .dropdown-menu {
@@ -69,8 +69,8 @@ export const InputArea = styles.section<{theme: string}>`
             width: 183px;
             max-height: 200px;
             overflow-y: auto;
-            background-color: ${props => props.theme === 'light' ? '#FFF' : 'rgb(43, 55, 67)'};
-            color: ${props => props.theme === 'light' ? '#000' : '#FFF'};
+            background-color: ${props =>props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
+            color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
             border: none;
             border-radius: 5px;
             box-shadow: 0px 2px 9px 0px #0000000E;
@@ -84,7 +84,7 @@ export const InputArea = styles.section<{theme: string}>`
         transition: all 0.2s ease;
     
         &:hover {
-            background-color: ${props => props.theme === 'light' ? '#b9b5b536' : '#1e1e1e'};
+            background-color: ${props =>props.theme.includes('light') ? '#b9b5b536' : '#1e1e1e'};
         }
         }
     }
