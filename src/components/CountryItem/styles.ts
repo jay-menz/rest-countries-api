@@ -35,6 +35,7 @@ export const CountryItem = styles.div<{theme: string}>`
         .country--name {
             font-size: 17px;
             margin: 10px 0 20px 0;
+            
         }
     }
 
