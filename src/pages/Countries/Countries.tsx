@@ -7,7 +7,7 @@ import Numbered from './Numbered';
 import { useForm } from '../../context/ContextTheme';
 import { useApi } from '../../context/ContextApi';
   
-const LIMIT = 24;                                                                                                                                                                                                                                                                                                                                                   
+const LIMIT = 8;                                                                                                                                                                                                                                                                                                                                                   
 
 export const Countries = () => {
   const { state } = useForm();

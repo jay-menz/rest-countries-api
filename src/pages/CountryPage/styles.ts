@@ -7,7 +7,7 @@ export const CountryPage = styles.main`
     .container {
         width: 1150px;
         margin: auto;
-        padding: 40px 0px;
+        padding: 40px 50px;
         
         .loading {
             min-height: 100vh;

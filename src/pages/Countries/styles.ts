@@ -6,10 +6,10 @@ export const CountriesArea = styles.main<{theme: DefaultTheme}>`
     transition: all ease 0.2s;
     .countries {
         display: grid;
-        width: 1150px;
+        width: 1250px;
         margin: auto;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 30px;
+        grid-gap: 33px;
 
         .loading, .no-country-message {
             color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};

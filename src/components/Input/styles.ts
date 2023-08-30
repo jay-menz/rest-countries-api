@@ -2,7 +2,7 @@ import styles, { DefaultTheme } from "styled-components";
 
 export const InputArea = styles.section<{theme: DefaultTheme}>`
     display: flex;
-    width: 1150px;
+    width: 1250px;
     margin: auto;
     justify-content: space-between;
     padding: 40px 0px;
