@@ -9,6 +9,7 @@ export const CountryPage = styles.main`
         margin: auto;
         padding: 40px 50px;
         
+        
         .loading {
             min-height: 100vh;
             color: ${props => props.theme === props.theme.includes('light') ? '' : '#FFF'};
@@ -27,6 +28,7 @@ export const CountryPage = styles.main`
         height: 35px;
         border-radius: 3px;
         box-shadow: 0px 2px 9px 0px #0000000E;
+        // border: 2px solid #333;
     }
     i {
         margin-right: 10px;

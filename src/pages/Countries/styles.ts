@@ -9,7 +9,10 @@ export const CountriesArea = styles.main<{theme: DefaultTheme}>`
         width: 1250px;
         margin: auto;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 33px;
+        grid-gap: 43px;
+        margin-top: 5px;
+        // border: 2px solid #333;
+        
 
         .loading, .no-country-message {
             color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
@@ -22,6 +25,7 @@ export const CountriesArea = styles.main<{theme: DefaultTheme}>`
         justify-content: center;
         margin: 0px;
         padding: 20px 0px;
+        
 
         button {
             height: 40px;
@@ -32,10 +36,12 @@ export const CountriesArea = styles.main<{theme: DefaultTheme}>`
             box-shadow: 0px 2px 9px 0px #0000000E;
             margin: 0px 5px;
             cursor: pointer;
+           
         }
 
         .active {
             font-weight: 900;
+            
         }
     }
 

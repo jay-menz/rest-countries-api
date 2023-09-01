@@ -33,6 +33,7 @@ export const InputArea = styles.section<{theme: DefaultTheme}>`
     i {
         margin: 0 20px 0 20px;
         color: #848484;
+        
     }
 
     .dropdown {
@@ -53,6 +54,8 @@ export const InputArea = styles.section<{theme: DefaultTheme}>`
         align-items: center;
         justify-content: space-between;
         box-shadow: 0px 2px 9px 0px #0000000E;
+        // border: 2px solid #333;
+        
         }
         
         .dropdown-toggle i {
@@ -64,18 +67,19 @@ export const InputArea = styles.section<{theme: DefaultTheme}>`
         .dropdown-menu {
             position: absolute;
             z-index: 1;
-            top: 100%;
+            top: 98%;
             left: 0;
             width: 183px;
-            max-height: 200px;
+            max-height: 173px;
             overflow-y: auto;
             background-color: ${props =>props.theme.includes('light') ? '#FFF' : 'rgb(43, 55, 67)'};
             color: ${props =>props.theme.includes('light') ? '#000' : '#FFF'};
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             box-shadow: 0px 2px 9px 0px #0000000E;
-            padding: 10px;
-            margin-top: 10px;
+            padding: 8px;
+            margin-top: 6px;
+            // border: 2px solid #333;
         }
     
         .dropdown-item {

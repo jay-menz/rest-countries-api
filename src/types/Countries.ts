@@ -6,5 +6,6 @@ export interface CountriesTypeScript {
     numericCode: string,
     flags: {
         png: string
+        
     }
 }

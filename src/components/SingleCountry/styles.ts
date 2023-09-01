@@ -15,6 +15,7 @@ export const CountryData = styles.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        
 
         h1 {
             margin: 0px;
@@ -84,6 +85,7 @@ export const CountryData = styles.div`
                 .data--firstArea {
                     p, span {
                         font-size: 14px;
+                        border: 2px solid yellow;
                     }
                 }
 

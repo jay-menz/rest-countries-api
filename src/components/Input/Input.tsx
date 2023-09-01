@@ -56,9 +56,9 @@ export const Input = ({ value, search, selectRegion }: InputTypeScript) => {
         {/* Only render the dropdown menu if the dropdownOpen state is true */}
         {dropdownOpen && (
           <div className="dropdown-menu">
-            <div className="dropdown-item" onClick={() => handleSelectRegion('')}>
+            {/* <div className="dropdown-item" onClick={() => handleSelectRegion('')}>
               All Regions
-            </div>
+            </div> */}
             <div className="dropdown-item" onClick={() => handleSelectRegion('Africa')}>
               Africa
             </div>
