@@ -51,7 +51,7 @@ export const Input = ({ value, search, selectRegion }: InputTypeScript) => {
 
       <div className="dropdown">
         <button className="dropdown-toggle" onClick={handleToggleDropdown}>
-       { selectedRegion ?  selectedRegion : 'Filter by Region' }<i className={dropdownOpen ? 'fa fa-chevron-up' : 'fa fa-chevron-down'}></i>
+       Filter by Region<i className={dropdownOpen ? 'fa fa-chevron-up' : 'fa fa-chevron-down'}></i>
         </button>
 
         {/* Only render the dropdown menu if the dropdownOpen state is true */}

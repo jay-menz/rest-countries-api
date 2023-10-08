@@ -1,14 +1,13 @@
 import * as S from './styles'
 import { useForm } from '../../context/ContextTheme'
 import { themeActions } from '../../context/ContextTheme'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
 
 export const Header = () => {
     const { state, dispatch } = useForm()
-    const navigate = useNavigate();
 
     const handleChangeTheme = () => {
         dispatch({
@@ -17,15 +16,10 @@ export const Header = () => {
         })
     }
     
- 
-    const handleRefresh = () => {
-        navigate('/');
-    };
-
     return (
         <S.Header theme={state.theme}>
             <div className='container'>
-            <Link  to="/" ><h1 onClick={handleRefresh}>Where in the world?</h1></Link>
+            <Link  to="/" ><h1>Where in the world?</h1></Link>
                 <p onClick={handleChangeTheme}>
                     <i className={state.theme.includes('light') ? 'far fa-moon' : 'fa fa-moon'}></i>
                     {state.theme.includes('light') ? 'Dark Mode' : 'Light Mode' } {/* Conditionally render the text */}
