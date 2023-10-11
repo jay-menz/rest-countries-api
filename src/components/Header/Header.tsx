@@ -1,13 +1,14 @@
 import * as S from './styles'
 import { useForm } from '../../context/ContextTheme'
 import { themeActions } from '../../context/ContextTheme'
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 
 
 
 export const Header = () => {
     const { state, dispatch } = useForm()
+    let navigate = useNavigate();
+    let location = useLocation();
 
     const handleChangeTheme = () => {
         dispatch({
@@ -15,11 +16,20 @@ export const Header = () => {
             payload: state.theme.includes('light') ? 'dark' : 'light'
         })
     }
+    const handleClick = () => { 
+        if(location.pathname === '/'){
+            window.location.reload()
+            return 
+        }
+        navigate("/")
+    }
+
+
     
     return (
         <S.Header theme={state.theme}>
             <div className='container'>
-            <Link  to="/" ><h1>Where in the world?</h1></Link>
+            <Link onClick={handleClick}  to="/" ><h1>Where in the world?</h1></Link>
                 <p onClick={handleChangeTheme}>
                     <i className={state.theme.includes('light') ? 'far fa-moon' : 'fa fa-moon'}></i>
                     {state.theme.includes('light') ? 'Dark Mode' : 'Light Mode' } {/* Conditionally render the text */}
